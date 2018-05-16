@@ -16,7 +16,7 @@ public class ByteBufToBytes {
      */
     public byte[] read(ByteBuf datas) {
         byte[] bytes = new byte[datas.readableBytes()]; // 创建byte[]
-        datas.readBytes(bytes);// 将ByteBuf转化为byte[]
+        datas.readBytes(bytes);// 将ByteBuf转化为byte[]数组
         return bytes;
     }
 }

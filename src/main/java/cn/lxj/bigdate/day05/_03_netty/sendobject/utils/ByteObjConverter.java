@@ -3,7 +3,7 @@ package cn.lxj.bigdate.day05._03_netty.sendobject.utils;
 import java.io.*;
 
 /**
- * ByteObjConverter
+ * ByteObjConverter 转换器
  * description
  * create by lxj 2018/5/10
  **/
@@ -18,8 +18,8 @@ public class ByteObjConverter {
         ByteArrayInputStream bi = new ByteArrayInputStream(bytes);
         ObjectInputStream oi = null;
         try {
-            oi = new ObjectInputStream(bi);
-            obj = oi.readObject();
+            oi = new ObjectInputStream(bi); // 读通道
+            obj = oi.readObject();  // 转化为对象
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
