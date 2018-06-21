@@ -15,5 +15,9 @@
     <bean id="two" class="cn.lxj.bigdate.day05._04_springannotation.springrunorder.Two">
         <constructor-arg name="two" value="two"/>
     </bean>
+    <!--构造方法构造-->
+    <bean id="four" class="cn.lxj.bigdate.day05._04_springannotation.springrunorder.Four">
+        <constructor-arg name="four" value="four"/><!--构造方法的参数名-->
+    </bean>
 
 </beans>

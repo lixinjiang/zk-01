@@ -16,7 +16,7 @@ import java.util.Map;
  * description TODO
  * create by lxj 2018/5/16
  **/
-//@Component //ApplicationContextAware会为Component组件调用setApplicationContext方法；  测试Myserver3时注释
+@Component //ApplicationContextAware会为Component组件调用setApplicationContext方法；  测试Myserver3时注释
 public class MyServer1 implements ApplicationContextAware {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class MyServer1 implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
         Map<String, Object> serviceBeanMap = ctx.getBeansWithAnnotation(RpcService.class);
-        System.out.println(serviceBeanMap);
+        System.out.println("serviceBeanMap:" + serviceBeanMap);
         for (Object serviceBean : serviceBeanMap.values()) {
             try {
                 String value = serviceBean.getClass().getAnnotation(RpcService.class).value();
